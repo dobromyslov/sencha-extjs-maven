@@ -113,7 +113,7 @@
                         </goals>
                         <configuration>
                             <!-- Set path to your Sencha Cmd executable-->
-                            <executable>../../soft/Sencha/Cmd/5.0.0.116/sencha</executable>
+                            <executable>${env.SENCHA_CMD}</executable>
                             <arguments>
                                 <argument>-sdk</argument>
                                 <argument>${basedir}/src/main/webapp</argument>

@@ -25,7 +25,7 @@ In order to compile your project from Maven use `exec-maven-plugin`:
                 </goals>
                 <configuration>
                     <!-- Set path to your Sencha Cmd executable-->
-                    <executable>../Sencha/Cmd/5.0.0.116/sencha</executable>
+                    <executable>${env.SENCHA_CMD}</executable>
                     <arguments>
                         <argument>-sdk</argument>
                         <argument>${basedir}/src/main/webapp</argument>
@@ -44,6 +44,7 @@ In order to compile your project from Maven use `exec-maven-plugin`:
 
 And run:
 
+    $ export SENCHA_CMD="/path/to/your/Sencha/Cmd/5.0.0.116/sencha"
     $ mvn compile
 
 Note: `${sencha.env}` determines your current maven profile: development or production. Take a look at `pom.xml`.
