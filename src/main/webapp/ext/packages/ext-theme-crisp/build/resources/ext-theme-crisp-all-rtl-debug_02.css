@@ -1,0 +1,127 @@
+/* line 64, ../../../ext-theme-base/sass/etc/mixins/border-management.scss */
+.x-panel-light-framed-outer-border-tr {
+  border-top-color: white !important;
+  border-top-width: 1px !important;
+  border-right-color: white !important;
+  border-right-width: 1px !important;
+}
+
+/* line 70, ../../../ext-theme-base/sass/etc/mixins/border-management.scss */
+.x-panel-light-framed-outer-border-trl {
+  border-top-color: white !important;
+  border-top-width: 1px !important;
+  border-right-color: white !important;
+  border-right-width: 1px !important;
+  border-left-color: white !important;
+  border-left-width: 1px !important;
+}
+
+/* line 78, ../../../ext-theme-base/sass/etc/mixins/border-management.scss */
+.x-panel-light-framed-outer-border-trb {
+  border-top-color: white !important;
+  border-top-width: 1px !important;
+  border-right-color: white !important;
+  border-right-width: 1px !important;
+  border-bottom-color: white !important;
+  border-bottom-width: 1px !important;
+}
+
+/* line 86, ../../../ext-theme-base/sass/etc/mixins/border-management.scss */
+.x-panel-light-framed-outer-border-trbl {
+  border-color: white !important;
+  border-width: 1px !important;
+}
+
+/* line 1, ../../../ext-theme-neptune/sass/src/grid/header/Container.scss */
+.x-grid-header-ct {
+  border: 1px solid #cecece;
+}
+
+/* line 6, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-column-header-trigger {
+  background: #eef6fb url(images/grid/hd-pop.png) no-repeat center center;
+  border-left: 1px solid #cecece;
+}
+
+/* line 12, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-trigger {
+  border-right: 1px solid #cecece;
+  border-left: 0;
+}
+
+/* line 18, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-column-header-last {
+  border-right-width: 0;
+}
+/* line 20, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-column-header-last .x-column-header-over .x-column-header-trigger {
+  border-right: 1px solid #cecece;
+}
+
+/* line 26, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-last {
+  border-left-width: 0;
+}
+/* line 28, ../../../ext-theme-neptune/sass/src/grid/column/Column.scss */
+.x-rtl.x-column-header-last .x-column-header-over .x-column-header-trigger {
+  border-left: 1px solid #cecece;
+}
+
+/* line 3, ../../../ext-theme-neptune/sass/src/form/field/File.scss */
+.x-form-file-wrap .x-form-trigger-wrap {
+  border: 0;
+}
+
+/* line 7, ../../../ext-theme-neptune/sass/src/form/field/File.scss */
+.x-form-file-wrap .x-form-trigger-wrap .x-form-text {
+  border: 1px solid;
+  border-color: #cecece;
+  height: 32px;
+}
+
+/* line 1, ../../../ext-theme-neptune/sass/src/form/field/HtmlEditor.scss */
+.x-html-editor-container {
+  border: 1px solid;
+  border-color: #cecece;
+}
+
+/* line 1, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-handle {
+  background-color: #cecece;
+  background-repeat: no-repeat;
+}
+
+/* line 10, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-east,
+.x-resizable-over .x-resizable-handle-west,
+.x-resizable-pinned .x-resizable-handle-east,
+.x-resizable-pinned .x-resizable-handle-west {
+  background-position: center;
+}
+/* line 15, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-south,
+.x-resizable-over .x-resizable-handle-north,
+.x-resizable-pinned .x-resizable-handle-south,
+.x-resizable-pinned .x-resizable-handle-north {
+  background-position: center;
+}
+/* line 19, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-southeast,
+.x-resizable-pinned .x-resizable-handle-southeast {
+  background-position: -2px -2px;
+}
+/* line 23, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-northwest,
+.x-resizable-pinned .x-resizable-handle-northwest {
+  background-position: 2px 2px;
+}
+/* line 27, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-northeast,
+.x-resizable-pinned .x-resizable-handle-northeast {
+  background-position: -2px 2px;
+}
+/* line 31, ../../../ext-theme-neptune/sass/src/resizer/Resizer.scss */
+.x-resizable-over .x-resizable-handle-southwest,
+.x-resizable-pinned .x-resizable-handle-southwest {
+  background-position: 2px -2px;
+}

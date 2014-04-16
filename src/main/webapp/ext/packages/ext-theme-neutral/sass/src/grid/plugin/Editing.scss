@@ -1,0 +1,93 @@
+@if $include-text-field-grid-ui and $include-ext-form-field-text {
+    @include extjs-text-field-ui(
+        $ui: 'grid',
+        $ui-height: $grid-editor-text-field-height,
+        $ui-font-size: $grid-editor-text-field-font-size,
+        $ui-font-family: $grid-editor-text-field-font-family,
+        $ui-font-weight: $grid-editor-text-field-font-weight,
+        $ui-color: $grid-editor-text-field-color,
+        $ui-background-color: $grid-editor-text-field-background-color,
+        $ui-border-width: $grid-editor-text-field-border-width,
+        $ui-border-style: $grid-editor-text-field-border-style,
+        $ui-border-color: $grid-editor-text-field-border-color,
+        $ui-focus-border-color: $grid-editor-text-field-focus-border-color,
+        $ui-invalid-border-color: $grid-editor-text-field-invalid-border-color,
+        $ui-background-image: $grid-editor-text-field-background-image,
+        $ui-padding: $grid-editor-text-field-padding,
+        $ui-empty-color: $grid-editor-text-field-empty-color,
+        $ui-body-width: $grid-editor-text-field-body-width,
+
+        $ui-invalid-background-color: $grid-editor-text-field-invalid-background-color,
+        $ui-invalid-background-image: $grid-editor-text-field-invalid-background-image,
+        $ui-invalid-background-repeat: $grid-editor-text-field-invalid-background-repeat,
+        $ui-invalid-background-position: $grid-editor-text-field-invalid-background-position,
+
+        $ui-trigger-width: $grid-editor-trigger-width,
+        $ui-trigger-border-width: $grid-editor-trigger-border-width,
+        $ui-trigger-border-color: $grid-editor-trigger-border-color,
+        $ui-trigger-border-style: $grid-editor-trigger-border-style,
+
+        $ui-trigger-border-color-over: null,
+        $ui-trigger-border-color-focus: null,
+        $ui-trigger-border-color-pressed: null,
+
+        $ui-trigger-background-image: $grid-editor-trigger-background-image,
+        $ui-trigger-background-color: $grid-editor-trigger-background-color,
+
+        $ui-textarea-line-height: $grid-editor-textarea-line-height,
+        $ui-textarea-body-height: $grid-editor-textarea-body-height,
+        $ui-file-field-color: $grid-editor-file-field-color,
+
+        $ui-classic-border: $grid-editor-text-field-classic-border
+    );
+}
+
+@if $include-spinner-trigger-grid-ui and $include-ext-form-field-spinner {
+    @include extjs-spinner-trigger-ui(
+        $ui: 'grid',
+        $ui-trigger-vertical: $grid-editor-spinner-trigger-vertical,
+        $ui-trigger-width: $grid-editor-trigger-width,
+        $ui-field-height: $grid-editor-text-field-height,
+        $ui-field-border-width: $grid-editor-text-field-border-width,
+        $ui-trigger-vertical-background-image: $grid-editor-spinner-trigger-vertical-background-image,
+        $ui-trigger-up-background-image: $grid-editor-spinner-trigger-up-background-image,
+        $ui-trigger-down-background-image: $grid-editor-spinner-trigger-down-background-image,
+        $ui-trigger-background-color: $grid-editor-text-field-background-color,
+        $ui-classic-border: $grid-editor-text-field-classic-border
+    );
+}
+
+@if $include-checkbox-grid-ui and $include-ext-form-field-checkbox {
+    @include extjs-checkbox-ui(
+        $ui: 'grid',
+        $ui-field-height: $grid-editor-height,
+        $ui-checkbox-size: $grid-editor-checkbox-size,
+        $ui-checkbox-background-image: $grid-editor-checkbox-background-image,
+        $ui-radio-background-image: $grid-editor-radio-background-image
+    );
+}
+
+@if $include-display-field-grid-ui and $include-ext-form-field-display {
+    @include extjs-display-field-ui(
+        $ui: 'grid',
+        $ui-color: $grid-editor-display-field-color,
+        $ui-font-size: $grid-editor-display-field-font-size,
+        $ui-font-family: $grid-editor-display-field-font-family,
+        $ui-font-weight: $grid-editor-display-field-font-weight,
+        $ui-line-height: $grid-editor-display-field-line-height
+    );
+}
+
+.#{$prefix}grid-editor {
+    @if $include-ext-form-field-display {
+        .#{$prefix}form-display-field {
+            text-overflow: $grid-cell-inner-text-overflow;
+        }
+    }
+
+    @if $include-ext-grid-column-action {
+        .#{$prefix}form-action-col-field {
+            padding: $grid-actioncolumn-cell-padding;
+        }
+    }
+}

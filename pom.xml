@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.argonio</groupId>
+    <artifactId>sencha-extjs-maven</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
+
+    <name>Sencha ExtJS Maven integration</name>
+    <description>Sencha Cmd 5 + Sencha ExtJS 5 + Maven integration in Java web application</description>
+    <url>https://github.com/dobromyslov/sencha-extjs-maven</url>
+    <inceptionYear>2014</inceptionYear>
+
+    <organization>
+        <url>http://argonio.com</url>
+        <name>Argonio ltd</name>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>viacheslav.dobromyslov</id>
+            <name>Viacheslav Dobromyslov</name>
+            <email>viacheslav@dobromyslov.ru</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>https://github.com/dobromyslov/sencha-extjs-maven.git</connection>
+        <developerConnection>https://github.com/dobromyslov/sencha-extjs-maven.git</developerConnection>
+        <url>https://github.com/dobromyslov/sencha-extjs-maven</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- Default build profile -->
+        <sencha.env>production</sencha.env>
+    </properties>
+
+    <profiles>
+        <!-- Development profile -->
+        <profile>
+            <id>dev</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>development</value>
+                </property>
+            </activation>
+            <properties>
+                <sencha.env>testing</sencha.env>
+            </properties>
+        </profile>
+
+        <!-- Production profile -->
+        <profile>
+            <id>prod</id>
+            <activation>
+                <property>
+                    <name>env</name>
+                    <value>production</value>
+                </property>
+            </activation>
+            <properties>
+                <sencha.env>production</sencha.env>
+            </properties>
+        </profile>
+    </profiles>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp/build/${sencha.env}/MyApp</directory>
+                            <excludes>
+                                <exclude>**/Readme.md</exclude>
+                            </excludes>
+                        </resource>
+                    </webResources>
+                    <packagingExcludes>.sencha/**,app/**,build/**,ext/**,overrides/**,packages/**,sass/**,bootstrap.css,bootstrap.js,bootstrap.json,build.xml,Readme.md</packagingExcludes>
+                </configuration>
+            </plugin>
+
+            <!-- Execute Sencha Cmd -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <id>sencha-compile</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Set path to your Sencha Cmd executable-->
+                            <executable>../../soft/Sencha/Cmd/5.0.0.116/sencha</executable>
+                            <arguments>
+                                <argument>-sdk</argument>
+                                <argument>${basedir}/src/main/webapp</argument>
+                                <argument>app</argument>
+                                <argument>build</argument>
+                                <argument>--clean</argument>
+                                <argument>--environment</argument>
+                                <argument>${sencha.env}</argument>
+                                <argument>--destination</argument>
+                                <argument>${basedir}/src/main/webapp/build</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

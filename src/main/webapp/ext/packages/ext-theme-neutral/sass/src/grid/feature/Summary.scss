@@ -1,0 +1,35 @@
+.#{$prefix}docked-summary {
+    border-width: 1px;
+    border-color: $panel-body-border-color;
+    border-style: $panel-body-border-style;
+
+    .#{$prefix}grid-table {
+        border: 0 none;
+    }
+    // When in a border layout, the background-color shows through the summary content
+    background: $grid-body-background-color!important;
+}
+
+.#{$prefix}grid-row-summary {
+    .#{$prefix}grid-cell,
+    .#{$prefix}grid-rowwrap,
+    .#{$prefix}grid-cell-rowbody {
+        border-color: $grid-row-cell-border-color;
+        background-color: $grid-body-background-color !important;
+        border-top: 1px solid $grid-row-cell-border-color;
+        font: $grid-row-cell-font;
+    }
+}
+
+// Ensure no border between summary and panel border, and that the background is consistent.
+.#{$prefix}docked-summary-bottom .#{$prefix}grid-row-summary .#{$prefix}grid-cell {
+    border-bottom: 0 none;
+}
+.#{$prefix}docked-summary-top .#{$prefix}grid-row-summary .#{$prefix}grid-cell {
+    border-top: 0 none;
+}
+
+// Embedded tables within rows do not get their own borders
+.#{$prefix}grid-with-row-lines .#{$prefix}grid-table-summary {
+    border: 0;
+}
