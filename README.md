@@ -8,7 +8,7 @@ At the moment [Sencha ExtJS 5 Beta](http://www.sencha.com/blog/announcing-public
 
     $ sencha generate app -ext MyApp src/main/webapp
 
-# How to compile ExtJS project
+# How to build ExtJS project with Maven
 
 In order to compile your project from Maven use `exec-maven-plugin`:
 
