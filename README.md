@@ -47,6 +47,8 @@ And run:
     $ export SENCHA_CMD="/path/to/your/Sencha/Cmd/5.0.0.116/sencha"
     $ mvn compile
 
+If you want to make SENCHA_CMD permanent then add it to your `/etc/profile` or `~/.bashrc` file.
+
 Note: `${sencha.env}` determines your current maven profile: development or production. Take a look at `pom.xml`.
 Your compiled ExtJS project will be located at `src/main/webapp/build/production`. You may change it to any other location.
 
