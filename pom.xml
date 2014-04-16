@@ -35,7 +35,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Default build profile -->
+        <!-- Default build environment -->
         <sencha.env>production</sencha.env>
     </properties>
 
