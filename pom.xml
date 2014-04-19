@@ -89,13 +89,12 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <webResources>
                         <resource>
-                            <directory>src/main/webapp/build/${sencha.env}/MyApp</directory>
+                            <directory>src/main/application/build/${sencha.env}/MyApp</directory>
                             <excludes>
                                 <exclude>**/Readme.md</exclude>
                             </excludes>
                         </resource>
                     </webResources>
-                    <packagingExcludes>.sencha/**,app/**,build/**,ext/**,overrides/**,packages/**,sass/**,bootstrap.css,bootstrap.js,bootstrap.json,build.xml,Readme.md</packagingExcludes>
                 </configuration>
             </plugin>
 
@@ -116,14 +115,12 @@
                             <executable>${env.SENCHA_CMD}</executable>
                             <arguments>
                                 <argument>-sdk</argument>
-                                <argument>${basedir}/src/main/webapp</argument>
+                                <argument>${basedir}/src/main/application</argument>
                                 <argument>app</argument>
                                 <argument>build</argument>
                                 <argument>--clean</argument>
                                 <argument>--environment</argument>
                                 <argument>${sencha.env}</argument>
-                                <argument>--destination</argument>
-                                <argument>${basedir}/src/main/webapp/build</argument>
                             </arguments>
                         </configuration>
                     </execution>

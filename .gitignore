@@ -1,4 +1,5 @@
 .idea
 *.iml
-src/main/webapp/build
-src/main/webapp/ext
+src/main/application/build
+src/main/application/ext
+src/main/resources/rebel.xml
