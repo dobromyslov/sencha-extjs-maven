@@ -3,8 +3,8 @@
 src/main/application/build
 src/main/application/ext
 src/main/application/sass/example/bootstrap.js
-src/main/application/sass/example/bootstrap.css
-src/main/application/sass/bootstrap.css
-src/main/application/sass/bootstrap.js
-src/main/application/sass/bootstrap.json
+src/main/application/sass/example/example.css
+src/main/application/bootstrap.css
+src/main/application/bootstrap.js
+src/main/application/bootstrap.json
 src/main/resources/rebel.xml

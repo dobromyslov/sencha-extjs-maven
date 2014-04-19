@@ -73,3 +73,17 @@ Use `maven-war-plugin` to package WAR file.
     </plugin>
 
 Now you have fully funtional Java web application.
+
+# IntelliJ Idea + JRebel + Web module debugging
+
+1. Create new artifact and add `src/main/application` folder to it instead of `src/main/application/build/testing/MyApp`
+2. Configure web server to deploy your newly created artifact.
+3. In `rebel.xml` change root web folder to `src/main/application`:
+
+
+	<web>
+		<link target="/">
+			<dir name="/home/user/IdeaProjects/sencha-extjs-maven/src/main/application">
+			</dir>
+		</link>
+	</web>
