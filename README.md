@@ -69,7 +69,6 @@ Use `maven-war-plugin` to package WAR file.
                     </excludes>
                 </resource>
             </webResources>
-            <packagingExcludes>.sencha/**,app/**,build/**,ext/**,overrides/**,packages/**,sass/**,bootstrap.css,bootstrap.js,bootstrap.json,build.xml,Readme.md</packagingExcludes>
         </configuration>
     </plugin>
 
