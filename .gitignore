@@ -2,4 +2,9 @@
 *.iml
 src/main/application/build
 src/main/application/ext
+src/main/application/sass/example/bootstrap.js
+src/main/application/sass/example/bootstrap.css
+src/main/application/sass/bootstrap.css
+src/main/application/sass/bootstrap.js
+src/main/application/sass/bootstrap.json
 src/main/resources/rebel.xml
