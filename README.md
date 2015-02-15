@@ -42,7 +42,7 @@ In order to compile your project from Maven use `exec-maven-plugin`:
 
 And run:
 
-    $ export SENCHA_CMD="/path/to/your/Sencha/Cmd/5.0.0.116/sencha"
+    $ export SENCHA_CMD="/path/to/your/Sencha/Cmd/5.1.2.52/sencha"
     $ mvn compile
 
 If you want to make SENCHA_CMD permanent then add it to your `/etc/profile` or `~/.bashrc` file.
