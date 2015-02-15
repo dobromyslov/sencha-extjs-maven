@@ -16,7 +16,7 @@ In order to compile your project from Maven use `exec-maven-plugin`:
     <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>1.2.1</version>
+        <version>1.3.2</version>
         <executions>
             <execution>
                 <id>sencha-compile</id>
@@ -27,9 +27,8 @@ In order to compile your project from Maven use `exec-maven-plugin`:
                 <configuration>
                     <!-- Set path to your Sencha Cmd executable-->
                     <executable>${env.SENCHA_CMD}</executable>
+                    <workingDirectory>${project.basedir}/src/main/application</workingDirectory>
                     <arguments>
-                        <argument>-sdk</argument>
-                        <argument>${basedir}/src/main/application</argument>
                         <argument>app</argument>
                         <argument>build</argument>
                         <argument>--clean</argument>

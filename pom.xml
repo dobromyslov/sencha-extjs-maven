@@ -35,7 +35,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Default build environment -->
+        <!-- Default Sencha Cmd build environment -->
         <sencha.env>testing</sencha.env>
     </properties>
 
@@ -113,9 +113,8 @@
                         <configuration>
                             <!-- Set path to your Sencha Cmd executable-->
                             <executable>${env.SENCHA_CMD}</executable>
+                            <workingDirectory>${project.basedir}/src/main/application</workingDirectory>
                             <arguments>
-                                <argument>-sdk</argument>
-                                <argument>${basedir}/src/main/application</argument>
                                 <argument>app</argument>
                                 <argument>build</argument>
                                 <argument>--clean</argument>
