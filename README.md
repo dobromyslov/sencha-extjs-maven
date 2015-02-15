@@ -1,13 +1,13 @@
 # How to generate ExtJS 5 project with Sencha Cmd 5
 
-At the moment [Sencha ExtJS 5 Beta](http://www.sencha.com/blog/announcing-public-beta-of-ext-js-5/) is out.
+At the moment [Sencha Cmd 5.1](http://docs.sencha.com/extjs/5.1/getting_started/getting_started.html) is out.
 
-1. Download Sencha Cmd 5 as described in the announcement.
-2. Generate new ExtJS 5 application:
+1. Download and install Sencha Cmd 5.1 as described in getting started. Also take a look at the [Cmd 5.x docs](http://docs.sencha.com/cmd/5.x/intro_to_cmd.html).
+2. Generate new ExtJS 5.1 application:
 
     $ sencha generate app -ext MyApp src/main/application
 
-I don't recommend to add "ext" directory to the Git repository.
+I don't recommend to add "ext" directory with all ExtJS framework files to our Git repository.
 
 # How to build ExtJS project with Maven
 
