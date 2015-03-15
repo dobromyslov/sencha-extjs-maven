@@ -90,3 +90,4 @@ Now you have fully funtional Java web application.
 See more info about JRebel configuration:
 * http://zeroturnaround.com/software/jrebel/learn/how-to-configure-rebel-xml/
 * http://manuals.zeroturnaround.com/jrebel/ide/intellij.html
+* http://manuals.zeroturnaround.com/jrebel/misc/frameworks.html
